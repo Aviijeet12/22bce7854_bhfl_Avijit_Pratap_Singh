@@ -40,7 +40,7 @@ export function ApiTester() {
   const [result, setResult] = React.useState<ApiResponse | null>(null)
 
   const base = React.useMemo(() => apiBase.trim().replace(/\/+$/, ""), [apiBase])
-  const endpoint = `${base || ""}/bfhl`
+  const endpoint = `${base || ""}/api/bfhl`
 
   function loadExample(example: unknown) {
     setInput(JSON.stringify(example, null, 2))
@@ -88,7 +88,7 @@ export function ApiTester() {
     }
 
     try {
-      const res = await fetch(endpoint, {
+  const res = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
@@ -107,7 +107,7 @@ export function ApiTester() {
       <CardHeader>
         <CardTitle className="text-balance">BFHL API Tester</CardTitle>
         <CardDescription>
-          Paste a JSON body, set your API base (optional), and call <span className="font-mono">POST /bfhl</span>.
+          Paste a JSON body, set your API base (optional), and call <span className="font-mono">POST /api/bfhl</span>.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
@@ -185,7 +185,7 @@ export function ApiTester() {
           {/* Submit + errors */}
           <div className="flex items-center gap-3">
             <Button type="submit" disabled={loading}>
-              {loading ? "Processing..." : "Send POST /bfhl"}
+              {loading ? "Processing..." : "Send POST /api/bfhl"}
             </Button>
             {error && <span className="text-sm text-destructive">{error}</span>}
           </div>
