@@ -55,12 +55,6 @@ export default function Page() {
         </section>
       </main>
 
-      <footer className="border-t">
-        <div className="mx-auto w-full max-w-5xl px-6 py-6 text-sm text-muted-foreground flex items-center justify-between">
-          <span>Built for the BFHL challenge</span>
-          <span className="hidden sm:inline">Accessible, mobile‑first, and fast.</span>
-        </div>
-      </footer>
     </div>
   )
 }
