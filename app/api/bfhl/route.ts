@@ -19,10 +19,10 @@ type BfhlResponse = {
 }
 
 function getUserIdentity() {
-  const fullName = process.env.BFHL_FULL_NAME || "john_doe"
-  const dob = process.env.BFHL_DOB_DDMMYYYY || "17091999"
-  const email = process.env.BFHL_EMAIL || "your_email_here"
-  const roll = process.env.BFHL_ROLL_NUMBER || "your_roll_number_here"
+  const fullName = process.env.BFHL_FULL_NAME || "avijit_pratap_singh"
+  const dob = process.env.BFHL_DOB_DDMMYYYY || "12092003"
+  const email = process.env.BFHL_EMAIL || "aijit.22bce7854@vitapstudent.ac.in"
+  const roll = process.env.BFHL_ROLL_NUMBER || "22BCE7854"
 
   const normalizedName = fullName.trim().toLowerCase().replace(/\s+/g, "_")
   return {
